@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantry Share</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Pantry sharing form">
+        <header class="card__header">
+          <p class="eyebrow">fresh list relay</p>
+          <h1>Send Your Pantry Snapshot</h1>
+          <p class="lede">
+            Fill the name field plus at least one product to unlock the WhatsApp
+            send button.
+          </p>
+        </header>
+        <form class="grid" id="pantry-form">
+          <label class="field">
+            <span>name and surname</span>
+            <input id="field-name" type="text" autocomplete="name" />
+          </label>
+          <label class="field">
+            <span>apple (kg)</span>
+            <input id="field-apple" type="text" inputmode="decimal" />
+          </label>
+          <label class="field">
+            <span>banana (piece)</span>
+            <input id="field-banana" type="text" inputmode="numeric" />
+          </label>
+          <label class="field">
+            <span>oliveoil (lt)</span>
+            <input id="field-oliveoil" type="text" inputmode="decimal" />
+          </label>
+          <label class="field">
+            <span>yoghurt (lt)</span>
+            <input id="field-yoghurt" type="text" inputmode="decimal" />
+          </label>
+          <button id="send-button" type="button" disabled>Send via WhatsApp</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

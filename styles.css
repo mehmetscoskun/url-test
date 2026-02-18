@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #f5f0ea;
+  --accent: #ff7b54;
+  --accent-dark: #d94d1d;
+  --ink: #1d2b2a;
+  --muted: #6c7a89;
+  --card: #fff9f4;
+  --border: rgba(29, 43, 42, 0.1);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #ffe0c7, var(--bg));
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.page {
+  width: min(960px, 100%);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 32px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border);
+}
+
+.card__header {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+
+h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.field input {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 123, 84, 0.2);
+}
+
+#send-button {
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+#send-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: var(--muted);
+}
+
+#send-button:not(:disabled):hover {
+  transform: translateY(-2px);
+  background: var(--accent-dark);
+}
